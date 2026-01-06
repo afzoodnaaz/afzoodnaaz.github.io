@@ -1,0 +1,151 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #c7f0cd;
+  color: #111;
+}
+
+.app {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 28px 16px 40px;
+}
+
+.header h1 {
+  margin: 0 0 6px;
+  font-size: 2rem;
+}
+
+.header p {
+  margin: 0 0 18px;
+  opacity: 0.75;
+}
+
+.card {
+  background: #8cb296;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 900px) {
+  .two-col { grid-template-columns: 1fr 1fr; }
+}
+
+.panel {
+  background: #dbe7df;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.panel h2 {
+  margin: 0 0 12px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+input, select {
+  flex: 1;
+  min-width: 240px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.14);
+  outline: none;
+}
+
+input:focus, select:focus {
+  box-shadow: 0 0 0 3px rgba(66, 244, 149, 0.2);
+  border-color: rgba(1, 110, 52, 0.8);
+}
+
+button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  background: #003414;
+  color: #fff;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.status {
+  margin-top: 10px;
+  font-weight: 700;
+  min-height: 22px;
+}
+
+.status.ok { color: #0c5f0c; }
+.status.warn { color: #7a5200; }
+.status.err { color: #a00000; }
+
+.result {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(0,0,0,0.15);
+}
+
+.result h3 {
+  margin: 0 0 10px;
+}
+
+.grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 700px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+.box {
+  padding: 12px;
+  border-radius: 12px;
+  background: #f5fff4;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.label {
+  font-size: 0.9rem;
+  opacity: 0.75;
+  margin-bottom: 6px;
+}
+
+.value {
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.meta {
+  margin: 12px 0 0;
+  opacity: 0.85;
+}
+
+.meta-label {
+  font-weight: 700;
+}
+
+.footer {
+  margin-top: 14px;
+  opacity: 0.7;
+}
